@@ -47,4 +47,12 @@ class User extends Authenticatable implements MustVerifyEmail, PasskeyUser
             'two_factor_confirmed_at' => 'datetime',
         ];
     }
+
+    /**
+     * Convert the model instance to a string representation.
+     * */
+    public function __toString(): string
+    {
+        return "{$this->name} ({$this->email})";
+    }
 }
