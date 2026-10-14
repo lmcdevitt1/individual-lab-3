@@ -10,10 +10,13 @@ class Item extends Model
         'name',
         'size',
         'price',
+        'price_range',
+        'model',
+        'manufacturer',
     ];
 
     public function toString(): string
     {
-        return $this->name . ' - ' . $this->size . ' ($' . $this->price . ')';
+        return "Name: {$this->name}, Manufacturer: {$this->manufacturer}, Make: {$this->make}, Model: {$this->model}, Price: {$this->price}, Price Range: {$this->price_range}";
     }
 }
