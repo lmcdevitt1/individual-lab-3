@@ -17,7 +17,10 @@
         th, td {
             padding: 8px 12px;
             border: 1px solid #191a1d;
+            text-align: center;
+            vertical-align: middle;
         }
+
     </style>
 </head>
 <body>
@@ -29,15 +32,14 @@
 <div class="menu-container">
 
     <table>
-        <thead>
+        <caption>Computer</caption>
         <tr>
-            <th>Computer</th>
-            <th>Name</th>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Price</th>
+            <td>Name</td>
+            <td>Make</td>
+            <td>Model</td>
+            <td>Price</td>
         </tr>
-        </thead>
+
         <tbody>
         @foreach ($items ?? [] as $item)
             @if(stripos($item->name, 'Computer') !== false)
@@ -59,7 +61,7 @@
     <table>
         <thead>
         <tr>
-            <th>Computer</th>
+            <caption>Computer</caption>
             <th>Name</th>
             <th>Make</th>
             <th>Model</th>
