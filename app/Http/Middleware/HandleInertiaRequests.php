@@ -42,6 +42,8 @@ class HandleInertiaRequests extends Middleware
                 'user' => $request->user(),
             ],
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
+            // Add this line to fetch your items globally:
+            'items' => \App\Models\Item::all(), // Update this to match your actual model/query logic
         ];
     }
 }

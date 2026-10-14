@@ -28,22 +28,27 @@
 
 <div class="menu-container">
 
-    <!-- LEFT TABLE: Hot Coffee -->
     <table>
         <thead>
         <tr>
-            <th>Coffee - Hot</th>
-            <th>Size</th>
+            <th>Computer</th>
+            <th>Name</th>
+            <th>Make</th>
+            <th>Model</th>
             <th>Price</th>
         </tr>
         </thead>
         <tbody>
-        @foreach ($items as $item)
-            @if(stripos($item->name, 'iced') === false)
+        @foreach ($items ?? [] as $item)
+            @if(stripos($item->name, 'Computer') !== false)
                 <tr>
                     <td>{{ $item->name }}</td>
-                    <td>{{ $item->size }}</td>
+                    <td>{{ $item->make }}</td>
+                    <td>{{ $item->model }}</td>
+                    <td>{{ $item->price }}</td>
+                    <td>{{ $item->price_range }}</td>
                     <td>${{ number_format($item->price, 2) }}</td>
+                    <td>${{ number_format($item->price_range, 2) }}</td>
                 </tr>
             @endif
         @endforeach
@@ -54,18 +59,24 @@
     <table>
         <thead>
         <tr>
-            <th>Coffee - Iced</th>
-            <th>Size</th>
+            <th>Computer</th>
+            <th>Name</th>
+            <th>Make</th>
+            <th>Model</th>
             <th>Price</th>
         </tr>
         </thead>
         <tbody>
-        @foreach ($items as $item)
-            @if(stripos($item->name, 'iced') !== false)
+        @foreach ($items ?? [] as $item)
+            @if(stripos($item->name, 'Computer') !== false)
                 <tr>
                     <td>{{ $item->name }}</td>
-                    <td>{{ $item->size }}</td>
+                    <td>{{ $item->make }}</td>
+                    <td>{{ $item->model }}</td>
+                    <td>{{ $item->price }}</td>
+                    <td>{{ $item->price_range }}</td>
                     <td>${{ number_format($item->price, 2) }}</td>
+                    <td>${{ number_format($item->price_range, 2) }}</td>
                 </tr>
             @endif
         @endforeach
