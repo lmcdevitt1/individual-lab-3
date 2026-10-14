@@ -7,16 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     protected $fillable = [
+
+        'manufacturer',
         'name',
-        'size',
+        'make',
+        'model',
         'price',
         'price_range',
-        'model',
-        'manufacturer',
+
     ];
 
     public function toString(): string
     {
-        return "Name: {$this->name}, Manufacturer: {$this->manufacturer}, Make: {$this->make}, Model: {$this->model}, Price: {$this->price}, Price Range: {$this->price_range}";
+        return  "Manufacturer: {$this->manufacturer},
+         Name: {$this->name},
+          Make: {$this->make},
+           Model: {$this->model},
+            Price: {$this->price},
+             Price Range: {$this->price_range}";
+
     }
 }

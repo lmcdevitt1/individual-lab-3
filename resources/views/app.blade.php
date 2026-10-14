@@ -20,10 +20,33 @@
             text-align: center;
             vertical-align: middle;
         }
-
+        .LLL{
+    text-align: center;
+}
+        .apple{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dell{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .hours {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .holiday {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+        }
     </style>
 </head>
 <body>
+<h1 class="LLL">Luke's Laptop Loaners</h1>
+<p class="hours">Hours of operation Pick up and tech support: Wed - Sun 9 AM - 9 PM</p><p class="hours">Hours of operation MOBILE Rental Truck: Thursday - Sunday 2 PM - 10 PM</p>
+<p class="holiday">Holidays and emergencies upon request to be quoted</p>
+<p class="hours">**Hourly Rate: $20/hour** applies to all truck rentals (**in addition to** the montly device subscription).</p>
 <div class="container">
         @yield('content')
     </div>
@@ -32,53 +55,59 @@
 <div class="menu-container">
 
     <table>
-        <caption>Computer</caption>
+        <thead>
         <tr>
-            <td>Name</td>
-            <td>Make</td>
-            <td>Model</td>
-            <td>Price</td>
+            <caption class="apple">Apple</caption>
+            <th>Manufacturer</th>
+            <th>Name</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Price Range</th>
         </tr>
-
+        </thead>
         <tbody>
         @foreach ($items ?? [] as $item)
-            @if(stripos($item->name, 'Computer') !== false)
+            @if(stripos($item->manufacturer, 'Apple') !== false)
                 <tr>
+                    <td>{{ $item ->manufacturer }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->make }}</td>
                     <td>{{ $item->model }}</td>
-                    <td>{{ $item->price }}</td>
+                    <td>${{ $item->price }}</td>
                     <td>{{ $item->price_range }}</td>
-                    <td>${{ number_format($item->price, 2) }}</td>
-                    <td>${{ number_format($item->price_range, 2) }}</td>
+
                 </tr>
             @endif
         @endforeach
         </tbody>
     </table>
 
-    <!-- RIGHT TABLE: Iced Coffee -->
+
     <table>
         <thead>
         <tr>
-            <caption>Computer</caption>
+            <caption class="dell">Dell</caption>
+            <th>Manufacturer</th>
             <th>Name</th>
             <th>Make</th>
             <th>Model</th>
             <th>Price</th>
+            <th>Price Range</th>
         </tr>
         </thead>
         <tbody>
         @foreach ($items ?? [] as $item)
-            @if(stripos($item->name, 'Computer') !== false)
+            @if(stripos($item->manufacturer, 'Dell') !== false)
                 <tr>
+                    <td>{{ $item ->manufacturer }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->make }}</td>
                     <td>{{ $item->model }}</td>
-                    <td>{{ $item->price }}</td>
+                    <td>${{ $item->price }}</td>
                     <td>{{ $item->price_range }}</td>
-                    <td>${{ number_format($item->price, 2) }}</td>
-                    <td>${{ number_format($item->price_range, 2) }}</td>
+
+
                 </tr>
             @endif
         @endforeach
