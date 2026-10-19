@@ -1,7 +1,7 @@
-import _typeof from "./typeof.js";
-import checkInRHS from "./checkInRHS.js";
-import setFunctionName from "./setFunctionName.js";
-import toPropertyKey from "./toPropertyKey.js";
+var _typeof = require("./typeof.js")["default"];
+var checkInRHS = require("./checkInRHS.js");
+var setFunctionName = require("./setFunctionName.js");
+var toPropertyKey = require("./toPropertyKey.js");
 function applyDecs2311(e, t, n, r, o, i) {
   var a,
     c,
@@ -54,7 +54,7 @@ function applyDecs2311(e, t, n, r, o, i) {
           t[4](this, e);
         }
       } : P[F] = v, l || setFunctionName(P[F], r, E ? "" : F)) : l || (P = Object.getOwnPropertyDescriptor(e, r)), !l && !f) {
-        if ((c = y[+s][r]) && 7 !== (c ^ o)) throw Error("Decorating two elements with the same name (" + P[F].name + ") is not supported yet");
+        if ((c = y[+s][r]) && 7 != (c ^ o)) throw Error("Decorating two elements with the same name (" + P[F].name + ") is not supported yet");
         y[+s][r] = o < 3 ? 1 : o;
       }
     }
@@ -121,4 +121,4 @@ function applyDecs2311(e, t, n, r, o, i) {
     }
   };
 }
-export { applyDecs2311 as default };
+module.exports = applyDecs2311, module.exports.__esModule = true, module.exports["default"] = module.exports;

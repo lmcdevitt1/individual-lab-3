@@ -1,10 +1,10 @@
-import _typeof from "./typeof.js";
-import setFunctionName from "./setFunctionName.js";
-import toPropertyKey from "./toPropertyKey.js";
+var _typeof = require("./typeof.js")["default"];
+var setFunctionName = require("./setFunctionName.js");
+var toPropertyKey = require("./toPropertyKey.js");
 function applyDecs2203RFactory() {
   function createAddInitializerMethod(e, t) {
     return function (r) {
-      !function (e) {
+      !function (e, t) {
         if (e.v) throw Error("attempted to call addInitializer after decoration was finished");
       }(t), assertCallable(r, "An initializer"), e.push(r);
     };
@@ -186,6 +186,6 @@ function applyDecs2203RFactory() {
   };
 }
 function applyDecs2203R(e, t, r) {
-  return (applyDecs2203R = applyDecs2203RFactory())(e, t, r);
+  return (module.exports = applyDecs2203R = applyDecs2203RFactory(), module.exports.__esModule = true, module.exports["default"] = module.exports)(e, t, r);
 }
-export { applyDecs2203R as default };
+module.exports = applyDecs2203R, module.exports.__esModule = true, module.exports["default"] = module.exports;
