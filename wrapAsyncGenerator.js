@@ -1,46 +1,59 @@
-import OverloadYield from "./OverloadYield.js";
+var OverloadYield = require("./OverloadYield.js");
 function _wrapAsyncGenerator(e) {
   return function () {
     return new AsyncGenerator(e.apply(this, arguments));
   };
 }
 function AsyncGenerator(e) {
-  var t, n;
-  function resume(t, n) {
+  var r, t;
+  function resume(r, t) {
     try {
-      var r = e[t](n),
-        o = r.value,
+      var n = e[r](t),
+        o = n.value,
         u = o instanceof OverloadYield;
-      Promise.resolve(u ? o.v : o).then(function (n) {
+      Promise.resolve(u ? o.v : o).then(function (t) {
         if (u) {
-          var i = "return" === t && o.k ? t : "next";
-          if (!o.k || n.done) return resume(i, n);
-          n = e[i](n).value;
+          var i = "return" === r ? "return" : "next";
+          if (!o.k || t.done) return resume(i, t);
+          t = e[i](t).value;
         }
-        settle(!!r.done, n);
+        settle(n.done ? "return" : "normal", t);
       }, function (e) {
         resume("throw", e);
       });
     } catch (e) {
-      settle(2, e);
+      settle("throw", e);
     }
   }
-  function settle(e, r) {
-    2 === e ? t.reject(r) : t.resolve({
-      value: r,
-      done: e
-    }), (t = t.next) ? resume(t.key, t.arg) : n = null;
+  function settle(e, n) {
+    switch (e) {
+      case "return":
+        r.resolve({
+          value: n,
+          done: !0
+        });
+        break;
+      case "throw":
+        r.reject(n);
+        break;
+      default:
+        r.resolve({
+          value: n,
+          done: !1
+        });
+    }
+    (r = r.next) ? resume(r.key, r.arg) : t = null;
   }
-  this._invoke = function (e, r) {
+  this._invoke = function (e, n) {
     return new Promise(function (o, u) {
       var i = {
         key: e,
-        arg: r,
+        arg: n,
         resolve: o,
         reject: u,
         next: null
       };
-      n ? n = n.next = i : (t = n = i, resume(e, r));
+      t ? t = t.next = i : (r = t = i, resume(e, n));
     });
   }, "function" != typeof e["return"] && (this["return"] = void 0);
 }
@@ -53,4 +66,4 @@ AsyncGenerator.prototype["function" == typeof Symbol && Symbol.asyncIterator || 
 }, AsyncGenerator.prototype["return"] = function (e) {
   return this._invoke("return", e);
 };
-export { _wrapAsyncGenerator as default };
+module.exports = _wrapAsyncGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
