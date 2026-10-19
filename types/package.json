@@ -1,38 +1,26 @@
 {
-  "name": "@babel/types",
-  "version": "8.0.6",
-  "description": "Babel Types is a Lodash-esque utility library for AST nodes",
-  "author": "The Babel Team (https://babel.dev/team)",
-  "homepage": "https://babel.dev/docs/en/next/babel-types",
-  "bugs": "https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20types%22+is%3Aopen",
+  "name": "@oxc-project/types",
+  "version": "0.151.0",
+  "description": "Types for Oxc AST nodes",
+  "keywords": [
+    "AST",
+    "Parser"
+  ],
+  "homepage": "https://oxc.rs",
+  "bugs": "https://github.com/oxc-project/oxc/issues",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
+  "author": "Boshen and oxc contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel.git",
-    "directory": "packages/babel-types"
+    "url": "git+https://github.com/oxc-project/oxc.git",
+    "directory": "npm/oxc-types"
   },
-  "main": "./lib/index.js",
-  "dependencies": {
-    "@babel/helper-string-parser": "^8.0.6",
-    "@babel/helper-validator-identifier": "^8.0.6"
+  "funding": {
+    "url": "https://github.com/sponsors/oxc-project"
   },
-  "devDependencies": {
-    "@babel/generator": "^8.0.6",
-    "@babel/helper-fixtures": "^8.0.5",
-    "@babel/parser": "^8.0.6"
-  },
-  "engines": {
-    "node": "^22.18.0 || >=24.11.0"
-  },
-  "exports": {
-    ".": {
-      "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
-    },
-    "./package.json": "./package.json"
-  },
-  "type": "module"
+  "files": [
+    "types.d.ts"
+  ],
+  "type": "module",
+  "types": "types.d.ts"
 }
