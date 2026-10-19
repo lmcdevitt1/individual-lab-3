@@ -1,32 +1,31 @@
 {
-  "name": "@babel/helper-globals",
+  "name": "@babel/helper-string-parser",
   "version": "8.0.6",
-  "author": "The Babel Team (https://babel.dev/team)",
-  "license": "MIT",
-  "description": "A collection of JavaScript globals for Babel internal usage",
+  "description": "A utility package to parse strings",
   "repository": {
     "type": "git",
     "url": "https://github.com/babel/babel.git",
-    "directory": "packages/babel-helper-globals"
+    "directory": "packages/babel-helper-string-parser"
   },
+  "homepage": "https://babel.dev/docs/en/next/babel-helper-string-parser",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "exports": {
-    "./data/browser-upper.json": "./data/browser-upper.json",
-    "./data/builtin-lower.json": "./data/builtin-lower.json",
-    "./data/builtin-upper.json": "./data/builtin-upper.json",
-    "./package.json": "./package.json"
-  },
-  "keywords": [
-    "babel",
-    "globals"
-  ],
+  "main": "./lib/index.js",
   "devDependencies": {
-    "globals": "^16.1.0"
+    "charcodes": "^0.2.0"
   },
   "engines": {
     "node": "^22.18.0 || >=24.11.0"
+  },
+  "author": "The Babel Team (https://babel.dev/team)",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "type": "module"
 }

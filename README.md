@@ -1,19 +1,19 @@
-# @babel/helper-globals
+# @babel/helper-string-parser
 
-> A collection of JavaScript globals for Babel internal usage
+> A utility package to parse strings
 
-See our website [@babel/helper-globals](https://babeljs.io/docs/babel-helper-globals) for more information.
+See our website [@babel/helper-string-parser](https://babeljs.io/docs/babel-helper-string-parser) for more information.
 
 ## Install
 
 Using npm:
 
 ```sh
-npm install --save @babel/helper-globals
+npm install --save @babel/helper-string-parser
 ```
 
 or using yarn:
 
 ```sh
-yarn add @babel/helper-globals
+yarn add @babel/helper-string-parser
 ```
