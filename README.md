@@ -1,19 +1,5 @@
-# @babel/compat-data
+# Oxc's modular runtime helpers
 
-> The compat-data to determine required Babel plugins
+Code copied from the published package `@babel/runtime`.
 
-See our website [@babel/compat-data](https://babeljs.io/docs/babel-compat-data) for more information.
-
-## Install
-
-Using npm:
-
-```sh
-npm install --save @babel/compat-data
-```
-
-or using yarn:
-
-```sh
-yarn add @babel/compat-data
-```
+All credits to the Babel team.
