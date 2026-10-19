@@ -1,19 +1,19 @@
-# @babel/runtime
+# @babel/helper-globals
 
-> babel's modular runtime helpers
+> A collection of JavaScript globals for Babel internal usage
 
-See our website [@babel/runtime](https://babeljs.io/docs/babel-runtime) for more information.
+See our website [@babel/helper-globals](https://babeljs.io/docs/babel-helper-globals) for more information.
 
 ## Install
 
 Using npm:
 
 ```sh
-npm install --save @babel/runtime
+npm install --save @babel/helper-globals
 ```
 
 or using yarn:
 
 ```sh
-yarn add @babel/runtime
+yarn add @babel/helper-globals
 ```
