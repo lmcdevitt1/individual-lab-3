@@ -1,19 +1,19 @@
-# @babel/helper-string-parser
+# @babel/helper-validator-option
 
-> A utility package to parse strings
+> Validate plugin/preset options
 
-See our website [@babel/helper-string-parser](https://babeljs.io/docs/babel-helper-string-parser) for more information.
+See our website [@babel/helper-validator-option](https://babeljs.io/docs/babel-helper-validator-option) for more information.
 
 ## Install
 
 Using npm:
 
 ```sh
-npm install --save @babel/helper-string-parser
+npm install --save @babel/helper-validator-option
 ```
 
 or using yarn:
 
 ```sh
-yarn add @babel/helper-string-parser
+yarn add @babel/helper-validator-option
 ```
