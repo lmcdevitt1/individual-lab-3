@@ -1,19 +1,19 @@
-# @babel/helper-validator-identifier
+# @babel/compat-data
 
-> Validate identifier/keywords name
+> The compat-data to determine required Babel plugins
 
-See our website [@babel/helper-validator-identifier](https://babeljs.io/docs/babel-helper-validator-identifier) for more information.
+See our website [@babel/compat-data](https://babeljs.io/docs/babel-compat-data) for more information.
 
 ## Install
 
 Using npm:
 
 ```sh
-npm install --save @babel/helper-validator-identifier
+npm install --save @babel/compat-data
 ```
 
 or using yarn:
 
 ```sh
-yarn add @babel/helper-validator-identifier
+yarn add @babel/compat-data
 ```
