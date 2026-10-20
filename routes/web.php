@@ -14,6 +14,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::controller(ItemController::class)->group(function () {
+    Route::get('/Item', 'index')->name('items.index');
+});
+Route::controller(ItemController::class)->group(function () {
     Route::get('/items', 'index')->name('items.index');
 });
 
