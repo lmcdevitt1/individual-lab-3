@@ -22,7 +22,7 @@ Check the code coverage report and aim for 100% coverage for the chosen controll
 
 
 
-Acceptance Criteria:
+**Acceptance Criteria:**
 
 Testing environment is set up and tests can be run.
 Feature tests for listing items, retrieving single item by ID, and handling invalid IDs are written.
